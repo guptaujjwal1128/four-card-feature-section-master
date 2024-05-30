@@ -1,6 +1,6 @@
-# Frontend Mentor - Product preview card component solution
+# Frontend Mentor - Four Card Feature Section solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Four Card Feature Section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -22,8 +22,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover and focus states for interactive elements
+- View the optimal layout for the site depending on their device's screen size
 
 ### Screenshot
 
@@ -40,20 +39,18 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Flexbox and Gridbox
 - Mobile-first workflow
 - Vanilla JS
 - [Webpack](https://webpack.js.org) - Module Bundler
 
 ### What I learned
-- image optimization using picture and different sources for different screen sizes
 - responsive design art
-- hover and focus states for interactive elements
-- page performance, accessibility, good practices, seo score improvement and analysis via chrome browser dev tools  
+- performance profiling using chrome dev tools
+- font optimization basics   
 
 ### Continued development
 
- - scoring high in chrome dev tools lighthouse by following best practices
  - responsive and pretty UI designing
  - SEO
  - Popular JS frameworks

@@ -1,6 +1,5 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const common = require("./webpack.common.js");
 
@@ -16,6 +15,8 @@ module.exports = merge(common, {
     hot: true,
     compress: true,
     historyApiFallback: true,
-    watchFiles: ["src/template.html"],
+    watchFiles: {
+      paths: ["src/**/*"],
+    },
   },
 });

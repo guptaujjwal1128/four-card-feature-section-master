@@ -1,5 +1,3 @@
-@use "./variables" as *;
-
 /****** RESET START ******/
 
 /*
@@ -23,10 +21,7 @@
 */
 html,
 body {
-  width: 100%; /* Ensure the body takes up the full width of the viewport */
   height: 100vh; /* Ensure the body takes up the full height of the viewport */
-  font-size: $font-size; /* Set the base font size */
-
   line-height: 1.5; /* Set a comfortable line height for readability */
   -webkit-font-smoothing: antialiased; /* Improve text rendering on webkit browsers */
 }

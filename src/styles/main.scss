@@ -1,0 +1,152 @@
+@use "./reset";
+@use "./variables" as *;
+@use "./mixins";
+@use "./fonts";
+
+html,
+body {
+  font-size: $font-size;
+  font-family: $font-family;
+  background-color: $neutral-very-light-gray;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: $neutral-grayish-blue;
+  font-display: optional;
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .four-card {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3.5rem;
+      max-width: $breakpoint-xl;
+      &_heading {
+        max-width: $breakpoint-sm;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      hgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        h1 {
+          font-size: $font-size-lg;
+          font-weight: $font-weight-light;
+          color: $neutral-very-dark-blue;
+        }
+        h2 {
+          font-size: $font-size-lg;
+          font-weight: $font-weight-semibold;
+          color: $neutral-very-dark-blue;
+        }
+      }
+      &_body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "supervisor team-builder calculator"
+          "supervisor karma calculator";
+        gap: 2rem;
+        &_section {
+          border-radius: 5px;
+          overflow: hidden;
+          box-shadow: 5px 5px 15px hsl(0, 0%, 80%);
+          border-top: 5px solid;
+          padding: 2rem;
+          min-height: $card-height-min;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          h3 {
+            color: $neutral-very-dark-blue;
+            font-weight: $font-weight-semibold;
+          }
+          p {
+            font-size: $font-size-sm;
+            // flex-grow: 1;
+          }
+          figure {
+            margin-top: auto;
+            img {
+              width: 20%;
+              height: auto;
+              aspect-ratio: 1/1;
+              margin-left: auto;
+            }
+          }
+          &#supervisor {
+            grid-area: supervisor;
+            border-color: $primary-cyan;
+            place-self: center stretch;
+          }
+          &#team-builder {
+            grid-area: team-builder;
+            border-color: $primary-red;
+          }
+          &#calculator {
+            grid-area: calculator;
+            border-color: $primary-blue;
+            place-self: center stretch;
+          }
+          &#karma {
+            grid-area: karma;
+            border-color: $primary-orange;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .attribution {
+      padding: 1rem;
+      font-size: $font-size-sm;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      &:hover,
+      &:focus {
+        color: hsl(228, 45%, 14%);
+      }
+    }
+  }
+}
+
+@include mixins.tablet {
+  html {
+    main {
+      .four-card {
+        &_body {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-areas:
+            "supervisor team-builder"
+            "karma calculator";
+        }
+      }
+    }
+  }
+}
+
+@include mixins.mobile {
+  html {
+    main {
+      .four-card {
+        &_body {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "supervisor"
+            "team-builder"
+            "calculator"
+            "karma";
+        }
+      }
+    }
+  }
+}

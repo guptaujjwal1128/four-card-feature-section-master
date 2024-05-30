@@ -1,5 +1,8 @@
 // Layout
+$breakpoint-sm: 480px;
 $breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1160px;
 
 // Colors
 $primary-red: hsl(0, 78%, 62%);
@@ -9,12 +12,17 @@ $primary-blue: hsl(212, 86%, 64%);
 
 // Neutral Colors
 $neutral-very-dark-blue: hsl(234, 12%, 34%);
-$neutral-grayish-blue: hsl(229, 6%, 66%);
+$neutral-grayish-blue: hsl(229, 6%, 46%);
 $neutral-very-light-gray: hsl(0, 0%, 98%);
 
 // Typography
+$font-size-sm: 13px;
 $font-size: 15px;
+$font-size-lg: 30px;
 $font-family: "Poppins", sans-serif;
 $font-weight-light: 200;
 $font-weight-regular: 400;
 $font-weight-semibold: 600;
+
+// Fixed Heights
+$card-height-min: 250px;
